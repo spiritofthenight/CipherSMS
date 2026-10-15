@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'org.ciphersms.app'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'org.ciphersms.app'
+        minSdk 28
+        targetSdk 36
+        versionCode 1
+        versionName '0.1.0'
+        testInstrumentationRunner 'android.test.InstrumentationTestRunner'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = false
+    }
+}
+
+dependencies {
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.86'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:9.0.41'
+
+    testImplementation 'junit:junit:4.13.2'
+}

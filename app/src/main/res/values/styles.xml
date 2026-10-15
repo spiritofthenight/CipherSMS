@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ink">#17212F</color>
+    <color name="muted">#637083</color>
+    <color name="accent">#2459A9</color>
+    <color name="background">#F3F6FA</color>
+    <color name="card">#FFFFFF</color>
+    <color name="danger">#B42318</color>
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>
