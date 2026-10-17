@@ -360,18 +360,22 @@ public final class MainActivity extends Activity {
                 } else if (result.status == VaultStore.UnlockStatus.BAD_PASSWORD) {
                     SecurityPrefs.FailureResult failure = throttle.recordFailure();
                     long lockLeft = throttle.remainingLockMillis();
-                    String text = "Incorrect password. Consecutive failures: " + failure.count + ".";
-                    if (failure.delayMillis > 0L) text += " Try again in " + SecurityPrefs.prettyTime(lockLeft) + ".";
+
+                    String text = "Incorrect password. Consecutive failures: "
+                            + failure.count + ".";
+
+                    if (failure.delayMillis > 0L) {
+                        text += " Try again in "
+                                + SecurityPrefs.prettyTime(lockLeft) + ".";
+                    }
+                    final String statusText = text;
+
                     runOnUiThread(() -> {
                         unlockButton.setEnabled(true);
-                        setStatus(status, text, true);
-                    });
-                } else {
-                    runOnUiThread(() -> {
-                        unlockButton.setEnabled(true);
-                        setStatus(status, "The local vault or security metadata is damaged. Do not keep retrying; there is no automatic recovery or backup.", true);
+                        setStatus(status, statusText, true);
                     });
                 }
+
             });
         });
     }
@@ -1337,15 +1341,27 @@ public final class MainActivity extends Activity {
         }
     }
 
-    private JSONObject filteredArray(JSONArray source, String id, String field) throws JSONException {
+
+    private JSONArray filteredArray(
+            JSONArray source,
+            String id,
+            String field
+    ) throws JSONException {
         JSONArray kept = new JSONArray();
+
         if (source == null) return kept;
+
         for (int i = 0; i < source.length(); i++) {
             JSONObject item = source.optJSONObject(i);
-            if (item != null && !id.equals(item.optString(field))) kept.put(item);
+
+            if (item != null && !id.equals(item.optString(field))) {
+                kept.put(item);
+            }
         }
+
         return kept;
     }
+
 
     private static JSONObject findContactByIdInData(JSONObject data, String id) {
         if (id == null) return null;

@@ -28,6 +28,6 @@ android {
 dependencies {
     implementation 'org.bouncycastle:bcprov-jdk18on:1.86'
     implementation 'com.googlecode.libphonenumber:libphonenumber:9.0.41'
-
+    implementation 'androidx.core:core:1.15.0'
     testImplementation 'junit:junit:4.13.2'
 }
