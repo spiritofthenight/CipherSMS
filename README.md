@@ -12,8 +12,11 @@ This beta is intended for people willing to test the application, identify bugs,
 **Do not use CipherSMS for sensitive, high-risk, emergency, or otherwise critical communications. Use sample messages only while testing.**
 
 ## Screenshot
-<img src="screenshot1.jpg" width="240" alt="CipherSMS screenshot">
+<p align="center">
+  <img src="screenshot1.jpg" width="240" alt="CipherSMS screenshot">
+</p>
 <hr>
+
 ## Download the beta
 
 Download the APK from the official GitHub release:
