@@ -54,7 +54,6 @@ A recipient app sends an encrypted acknowledgment after it has authenticated a t
 
 ## License status
 
-No license has been selected yet. Before publishing this repository as an open-source project, choose and add the license you want; do not assume redistribution permissions from the absence of a license file.
 
 ## Files
 
