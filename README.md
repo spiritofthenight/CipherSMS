@@ -53,7 +53,7 @@ A recipient app sends an encrypted acknowledgment after it has authenticated a t
 - A trusted contact who knows the pairwise symmetric secret can create a valid packet for that relationship. This design authenticates against a carrier that does not know the secret; it does not provide per-message non-repudiation against the other endpoint.
 
 ## License status
-
+MIT
 
 ## Files
 
